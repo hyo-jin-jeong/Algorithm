@@ -25,5 +25,5 @@ def closest_pair(coordinates):
     return [(x1, y1), (x2, y2)]
 
 
-test_coordinates = [(2, 3), (12, 30), (40, 50), (5, 1), (12, 10), (3, 4)]
+test_coordinates = [(3, 3), (12, 30), (40, 50), (5, 1), (12, 10), (3, 4)]
 print(closest_pair(test_coordinates))
