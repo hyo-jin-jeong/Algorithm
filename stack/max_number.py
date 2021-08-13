@@ -1,4 +1,4 @@
-def stack(num, m):
+def stack_fun(num, m):
     num = str(num)
     stack = []
     for x in num:
@@ -9,4 +9,5 @@ def stack(num, m):
     if m!=0:
         stack = stack[:-m]
     return ''.join(map(str, stack))
-print(stack(12345, 2))
+    
+print(stack_fun(12345, 2))

@@ -1,18 +1,18 @@
 from collections import deque
 
-def queue(n, k):
-    queue = list(range(1, n+1))
-    queue = deque(queue)
+def queue_fun(n, k):
+    dq = list(range(1, n+1))
+    dq = deque(dq)
     count = 0
-    while(len(queue) != 1):
+    while(len(dq) != 1):
         count += 1
         if count == k:
-            queue.popleft()
+            dq.popleft()
             count = 0
         else:
-            queue.append(queue[0])
-            queue.popleft()
+            dq.append(dq[0])
+            dq.popleft()
         
-    return queue[0]
+    return dq[0]
     
-print(queue(8, 3))
+print(queue_fun(8, 3))

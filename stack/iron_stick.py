@@ -1,4 +1,4 @@
-def stack(str):
+def stack_fun(str):
     stack =[]
     sum = 0
     for i in range(len(str)):
@@ -11,6 +11,7 @@ def stack(str):
             else:
                 sum += 1
     return sum
-print(stack('((()()))'))
+    
+print(stack_fun('((()()))'))
 
 

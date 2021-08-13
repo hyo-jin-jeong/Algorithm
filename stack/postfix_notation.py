@@ -1,4 +1,4 @@
-def stack(postfix):
+def stack_fun(postfix):
     stack = []
     for s in postfix:
         if s.isdecimal():
@@ -16,4 +16,4 @@ def stack(postfix):
                 stack.append(seconde/first)  
     return stack[0]     
 
-print(stack('352+*9-'))
+print(stack_fun('352+*9-'))
