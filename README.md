@@ -1,5 +1,5 @@
-# Algorithm
-algorithm
+# Algorithm & Data structure
+
 
 ## 인프런 알고리즘 강의를 통한 공부
 
