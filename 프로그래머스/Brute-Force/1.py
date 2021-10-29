@@ -31,7 +31,8 @@ def solution1(answers):
     answer = sorted(result.keys())
     return answer
 
-# 답
+# 답을 참고
+# answers을 기준으로 pattern을 비교하여 푸는 방식으로 변경
 def solution2(answers):
     result = []
     pattern = [[1, 2, 3, 4, 5, 1, 2, 3, 4, 5],
