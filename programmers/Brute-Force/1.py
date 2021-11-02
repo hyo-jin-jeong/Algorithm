@@ -35,22 +35,22 @@ def solution1(answers):
 # answers을 기준으로 pattern을 비교하여 푸는 방식으로 변경
 def solution2(answers):
     result = []
-    pattern = [[1, 2, 3, 4, 5, 1, 2, 3, 4, 5],
-              [2, 1, 2, 3, 2, 4, 2, 5, 2, 1, 2, 3, 2, 4, 2, 5], 
-              [3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, 4, 4, 5, 5]]
+    pattern = [[1, 2, 3, 4, 5],
+              [2, 1, 2, 3, 2, 4, 2, 5], 
+              [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]]
     sums = [0, 0 ,0]
     for idx, answer in enumerate(answers):
         if answer == pattern[0][idx%len(pattern[0])]:
             sums[0] += 1
-        elif answer == pattern[1][idx%len(pattern[1])]:
+        if answer == pattern[1][idx%len(pattern[1])]:
             sums[1] += 1
-        elif answer == pattern[2][idx%len(pattern[2])]:
+        if answer == pattern[2][idx%len(pattern[2])]:
             sums[2] += 1 
-    
+            
     for idx, sum in enumerate(sums):
         if max(sums) == sum:
             result.append(idx + 1)
     return result     
 
 print(solution1([0,0,0,0,0,0,0,0,0,0,1]))
-print(solution2([0,0,0,0,0,0,0,0,0,0,1]))
+print(solution2([1,3,2,4,2]))
