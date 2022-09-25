@@ -1,3 +1,16 @@
+const treeArray = [
+    undefined,
+    //1
+    9,
+    // 1*2, 1*2+1
+    3, 8,
+    // 2*2, 2*2+1, 3*2, 3*2+1
+    2, 5, undefined, 7,
+    // 4*2, 4*2+1, 5*2, 5*2+1,
+    undefined, undefined, undefined, 4
+]
+console.log(treeArray);
+
 class Node {
     constructor(value) {
         this.value = value;
