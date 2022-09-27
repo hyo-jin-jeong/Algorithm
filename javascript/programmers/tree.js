@@ -54,9 +54,10 @@ class Tree {
     display() {
         const queue = new Queue();
         queue.enqueue(this.root);
+
         while (queue.size) {
             const currentNode = queue.dequeue();
-            console.log(currentNode.value);
+            console.log('currentNode', currentNode.value);
             if (currentNode.left) queue.enqueue(currentNode.left);
             if (currentNode.right) queue.enqueue(currentNode.right);
         }
