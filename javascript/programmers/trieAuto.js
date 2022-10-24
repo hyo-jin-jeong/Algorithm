@@ -26,21 +26,30 @@ class Trie {
 
     has(string) {
         let currentNode = this.root;
-
+        let count = 0;
         for (const char of string) {
-
-            if (!currentNode.children.has(char)) {
-                return false;
+            if (!(currentNode.children.size > 1)) {
+                return count;
             }
             currentNode = currentNode.children.get(char);
+            count += 1;
         }
-        return true;
+        return count;
+
     }
 }
 
-const trie = new Trie();
-trie.insert("cat");
-trie.insert("can");
-console.log(trie.has("cat"));
-console.log(trie.has("can"));
-console.log(trie.has("cap"));
+function solution(words) {
+    let count = 0;
+    const trie = new Trie();
+    for (const word of words) {
+        trie.insert(word);
+    }
+    for (const word of words) {
+        const value = trie.has(word);
+        count += value;
+    }
+    return count
+}
+console.log(solution(["go", "gone", "guild"]))
+console.log(solution(["abc", "def", "ghi", "jklm"]))
