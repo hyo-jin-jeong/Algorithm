@@ -3,7 +3,6 @@ function combinations(arr, n) {
   console.log(arr, n);
   if (n === 1) {
     const re = arr.map((v) => [v]);
-    console.log(re);
     return re;
   }
   const result = [];
@@ -16,12 +15,9 @@ function combinations(arr, n) {
     // 선택된 요소 이전 요소들을 제외하고 재귀 호출한다.
     const combis = combinations(rest, n - 1);
     // 선택된 요소와 재귀 호출을 통해 구한 조합을 합쳐준다.
-    console.log("combis", combis);
     const combine = combis.map((v) => [fixed, ...v]);
-    console.log("combine", combine);
     // 결과 값을 추가한다.
     result.push(...combine);
-    console.log("result", result);
   });
 
   // 결과 반화
